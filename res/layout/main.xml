@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
-
-    <LinearLayout
+<RelativeLayout
+    	xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-    	<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_number" />
+        android:layout_height="fill_parent"
+        android:background="@drawable/main_background"
+        >
     	
     	<EditText 
-    	    android:layout_width="250px"
+    	    android:layout_width="match_parent"
     	    android:layout_height="wrap_content"
-    	    android:id="@+id/small_number_input"/>
+    	    android:id="@+id/small_number_input"
+    	    android:hint="@string/input_number"
+    	    android:maxLength="12"
+    	    android:textColorHint="@color/lbl_txt_color"
+    	    android:numeric="decimal"/>
          
     	<Button 
     	    android:layout_width="wrap_content"
     	    android:layout_height="wrap_content"
     	    android:text="@string/btn_zh"
     	    android:id="@+id/zh_btn"
+    	    android:layout_below="@id/small_number_input"
+    	    android:textColor="@color/black"
     	    />
-    </LinearLayout>
+ 
     
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
     	<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rmb_dx" />
+    	    android:id="@+id/lbl_prompt_result"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/rmb_dx"
+	        android:layout_below="@id/zh_btn"
+	        android:textColor="@color/black"
+	         />
     	
     	<TextView 
-    	    android:layout_width="match_parent"
-    	    android:layout_height="wrap_content"
-    	    android:id="@+id/big_number"/> 
-    </LinearLayout>
-
-</LinearLayout>
+    	    android:textColor="@color/black"
+    	    android:layout_below="@id/lbl_prompt_result"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="match_parent"
+    	    android:id="@+id/big_number" 
+    	    android:textSize="30sp"
+    	    android:paddingLeft="10sp"
+    	    android:paddingTop="10sp"
+    	    /> 
+    
+	</RelativeLayout>

@@ -4,7 +4,7 @@
     <string name="hello">Hello World, RMBZHActivity!</string>
     <string name="app_name">人民币大写转换器</string>
     <string name="input_number">请输入金额</string>
-    <string name="rmb_dx">金额（大写）</string>
+    <string name="rmb_dx">金额（大写）：</string>
     <string name="btn_zh">转换</string>
 
 </resources>
